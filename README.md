@@ -1,12 +1,14 @@
-## quick start
+## eBPF Examples
 
 ```
 git clone https://github.com/yubo/ebpf-examples 
 cd ebpf-examples
 ```
 
-## run
-- kprobe
+## Run
+
+#### Kprobe
+with vmlinux.h
 
 ```
 $ go run ./kprobe
@@ -17,7 +19,8 @@ $ go run ./kprobe
            <...>-134227 [000] d... 37225.927349: bpf_trace_printk: pid 134227 tcp_sendmsg 144
 ```
 
-- fentry
+#### Fentry
+with BPF CO-RE
 
 ```
 $ go run ./fentry
@@ -33,6 +36,7 @@ $ go run ./fentry
 ```
 
 ## rebuild object(*.o)
+default build with x86_64, rebuild with
 
 ```
 make
